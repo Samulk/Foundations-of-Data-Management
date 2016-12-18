@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<purpose>emergency contact</purpose>
+<persons>
+   <firstName>David</firstName>
+   <lastName>Small</lastName>
+   <age>38</age>
+</persons>
+
+<persons>
+   <firstName>John</firstName>
+   <lastName>Smith</lastName>
+   <age>25</age>
+   <address>
+      <street>21 2nd Street</street>
+      <city>New York</city>
+      <state>NY</state>
+      <postalCode>10021</postalCode>
+   </address>
+   <phoneNumbers>
+      <type>home</type>
+      <number>212 555-1234</number>
+   </phoneNumbers>
+   <phoneNumbers>
+      <type>mobile</type>
+      <number>646 555-4567</number>
+   </phoneNumbers>
+</persons>
+____________________________________________________________________________
+
+The first line would be <?xml> tags which denotes that it is an xml document
+
+Then the first key:value pair of 
+"purpose": "emergency contact"
+is converted to
+<purpose>emergency contact</purpose>. Here the key becomes the name of the tag and value becomes the text of the tag.
+
+Then we have array of persons given be "persons":[....]
+In the corresponding XML, we will have as many opening and closing <persons> tags as are the number of elements in the array. Since we have 2 elements in the array, we will have 2 persons tag.
+
+Inside the 1st person, we will have 3 sub tags i.e. firstname, lastname and age and their text will be derived from the "value" of the key value pairs inside "persons". So the 3 key value pairs would become 3 tags given below:
+
+<firstName>David</firstName>
+<lastName>Small</lastName>
+<age>38</age>
+
+Since we have }, the information about 1st person is complete and we will know parse the information about the 2nd person.
+
+The second person will also have 3 tags as discussed above.
+
+Since address is an object, we will first opening and closing <address> tag.
+
+The key value pairs inside the address would become tags inside the <address> tag and we would get the following tags under address tag:
+
+<street>21 2nd Street</street>
+<city>New York</city>
+<state>NY</state>
+<postalCode>10021</postalCode>
+
+Next we have list of phone numbers. So we will have as many phone numbers tags as is the size of the list. Since the size of the list is 2, we will get 2 opening and closing tags for "phoneNumbers"
+
+Inside each of the phone numbers, we have 2 key value pairs i.e. type and number. So they will become sub tags inside the phoneNumbers tag as follows:
+
+<type>home</type>
+<number>212 555-1234</number>
+
+The same thing would happen with the second mobile number too.
+
+Overall we would get the document given above

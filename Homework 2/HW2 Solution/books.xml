@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+<book>
+	<publisher>Addison-Wesley</publisher>
+        <author> Serge Abiteboul </author>
+        <author>
+	    	<first-name>Rick</first-name>
+		<last-name>Hull</last-name>
+	</author>
+        <author age="20"> Victor Vianu </author>
+        <title> Foundations of Databases </title>
+        <year> 1995 </year>
+	<price> 38.8 </price>
+</book>
+<cd price="55">
+        <publisher> Freeman </publisher>
+        <author age="30">Mary Lee</author>
+        <title>A wonderful world! </title>
+        <year> 1998 </year>
+</cd>
+</items>

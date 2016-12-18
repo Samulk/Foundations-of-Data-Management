@@ -1,0 +1,77 @@
+{
+  "items": {
+    "book": {
+      "publisher": "Addison-Wesley",
+      "author": ["Serge Abiteboul",
+                 {
+                    "first-name": "Rick",
+                    "last-name": "Hull"
+                 },
+                 {
+                    "-age":"25",
+                    "#text":"Victor Vianu"
+                 }
+                ],
+      "title": " Foundations of Databases ",
+      "year": " 1995 ",
+      "price": " 38.8 "
+       },
+    "cd": {
+      "-price": "55",
+      "publisher": " Freeman ",
+      "author": {
+       "-age": "30",
+       "#text": "Mary Lee"
+      },
+      "title": "A wonderful world! ",
+      "year": " 1998 "
+    }
+  }
+}
+
+
+
+_____________________________________________________________________________________________________
+
+The top most node of XML document is converted to an object in JSON represented by {}
+
+Inside the object, it has key value pair.
+
+Key is "items" and value contains 2 more objects i.e. book and cd
+
+The book tag becomes the key for the first object. The value is another object which has many key value pairs separated by commas
+
+The key for first pair is "publisher" and its value is "Addison-Wesley"
+
+The key for second pair is "author" and value is an array containing details of 3 authors
+
+The first element of the array is a string which is the name of the author
+
+The second element is an object because it has 2 elements inside it
+The key for the first element is "first-name" and its value is "Rick"
+The key for the second element is "last-name" and its value is "Hull"
+
+The third element of the array is again an object and has 2 key value pairs.
+In the first pair, key is "-age" and it's value is "20". We use "-age" because it denotes that it is an attribute and not a child element
+In the second pair, key is "#text" and value is "Victor Vianu". This tells us  that Victor Vianus is the text of the element
+
+Then we have some more key value pairs for title, year and price
+
+This is the end of the 1st object
+
+For the second object, key is "cd" and value is an object. Inside the object we have key value pairs separated by commas.
+
+In the first pair, "-price" is the key and it's value is "55". Since we have used "-price", it denotes that it is an attribute for the element CD
+
+The second pair contains "publisher" as key and "Freeman" as value. They have simply been derived from the element <publisher>
+
+The third pair has "author" as key and an object as value.
+The object contains 2 key value pairs:
+"-age": "30" denotes that it is an attribute of the element author
+"#text": "Mary Lee" denotes that it is the text for the the element author
+
+Then we have 2 more key value pairs:
+"title": "A wonderful world! "
+"year": " 1998 "
+
+Both of them have been derived from the text and value of the element

@@ -1,0 +1,31 @@
+{
+	"purpose": "emergency contact",
+	"persons":[
+		{
+    			"firstName": "David",
+			"lastName": "Small",
+    			"age": 38
+   		},
+   		{
+    			"firstName": "John",
+    			"lastName": "Smith",
+    			"age": 25,
+    			"address": {
+				"street": "21 2nd Street",
+        			"city": "New York",
+        			"state": "NY",
+        			"postalCode": "10021"	
+    			},
+    			"phoneNumbers": [
+        			{
+            				"type": "home",
+            				"number": "212 555-1234"
+        			},
+        			{
+            				"type": "mobile",
+            				"number": "646 555-4567"
+        			}
+    			]
+  		}
+	]
+}
